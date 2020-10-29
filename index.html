@@ -1,10 +1,74 @@
-<html lang="en-us">
+<!-- Declare the type of document we're sending -->
+<!DOCTYPE html>
+
+<!-- Declare the opening tag and the language-->
+<html lang="en">
+
+<!-- Declare the start of metadata -->
 <head>
+
+  <!-- Declare the character set encoding -->
   <meta charset="UTF-8">
-  <title>Maanasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Declare the title for this website tab -->
+  <title> Belly Button Biodiversity </title>
+
+  <!-- Declare the Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Declare the end of metadata -->  
 </head>
 
+<!-- Declare the main chunk of code -->
 <body>
-<h1> Maanasa </h1>
+
+  <!-- Declare the container that the main chunk of code -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(Images/4.jpg); height: 254px; background-position: center; background-size: cover;">
+        <h1 style="color: #F3EFE4; font-family: Calibri; "> Belly Button Biodiversity Dashboard </h1>
+        <p style="color: #F3EFE4; font-family: Calibri;"> Use the interactive charts below to explore the dataset </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well">
+          <h5 style="color: #1455CC; font-family: Calibri; font-size: medium; font-weight: bolder;"> Test Subject ID No.: </h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="color: #F3EFE4; font-family: Calibri; font-size: medium; font-weight: bolder;"> Demographic Info </h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--  Declare the various data sources -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+
+<!-- Declare the closing body tag -->
 </body>
+
+<!-- Declare the closing html tag -->
 </html>
